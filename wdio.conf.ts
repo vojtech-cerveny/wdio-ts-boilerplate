@@ -1,16 +1,15 @@
 export const config = {
-
   autoCompile: true,
   // see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
   // for all available options
   tsNodeOpts: {
     transpileOnly: true,
-    project: 'tsconfig.json'
+    project: 'tsconfig.json',
   },
   // tsconfig-paths is only used if "tsConfigPathsOpts" are provided, if you
   // do please make sure "tsconfig-paths" is installed as dependency
   tsConfigPathsOpts: {
-    baseUrl: './'
+    baseUrl: './',
   },
   //
   // ====================
@@ -36,9 +35,7 @@ export const config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: [
-    './test/**/**.ts'
-  ],
+  specs: ['./test/**/**.ts'],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -65,20 +62,21 @@ export const config = {
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
   // https://docs.saucelabs.com/reference/platforms-configurator
   //
-  capabilities: [{
-
-    // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-    // grid with only 5 firefox instances available you can make sure that not more than
-    // 5 instances get started at a time.
-    maxInstances: 5,
-    //
-    browserName: 'chrome',
-    acceptInsecureCerts: true
-    // If outputDir is provided WebdriverIO can capture driver session logs
-    // it is possible to configure which logTypes to include/exclude.
-    // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    // excludeDriverLogs: ['bugreport', 'server'],
-  }],
+  capabilities: [
+    {
+      // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+      // grid with only 5 firefox instances available you can make sure that not more than
+      // 5 instances get started at a time.
+      maxInstances: 5,
+      //
+      browserName: 'chrome',
+      acceptInsecureCerts: true,
+      // If outputDir is provided WebdriverIO can capture driver session logs
+      // it is possible to configure which logTypes to include/exclude.
+      // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+      // excludeDriverLogs: ['bugreport', 'server'],
+    },
+  ],
   //
   // ===================
   // Test Configurations
@@ -150,14 +148,12 @@ export const config = {
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: ['spec'],
 
-
-
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: 'bdd',
-    timeout: 60000
+    timeout: 60000,
   },
   //
   // =====
@@ -239,7 +235,6 @@ export const config = {
   // afterTest: function(test, context, { error, result, duration, passed, retries }) {
   // },
 
-
   /**
    * Hook that gets executed after the suite has ended
    * @param {Object} suite suite details
@@ -283,10 +278,10 @@ export const config = {
   // onComplete: function(exitCode, config, capabilities, results) {
   // },
   /**
-  * Gets executed when a refresh happens.
-  * @param {String} oldSessionId session ID of the old session
-  * @param {String} newSessionId session ID of the new session
-  */
+   * Gets executed when a refresh happens.
+   * @param {String} oldSessionId session ID of the old session
+   * @param {String} newSessionId session ID of the new session
+   */
   //onReload: function(oldSessionId, newSessionId) {
   //}
 }
