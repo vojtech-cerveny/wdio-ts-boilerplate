@@ -4,6 +4,7 @@ import SecurePage from './pageobjects/secure.page'
 describe('My Login application', () => {
   it('should login with valid credentials', () => {
     LoginPage.open()
+    browser.clickAndRun()
 
     LoginPage.login('tomsmith', 'SuperSecretPassword!')
     expect(SecurePage.flashAlert).toBeExisting()
