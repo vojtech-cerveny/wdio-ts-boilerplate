@@ -10,5 +10,5 @@
     "strictNullChecks": true,
     "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "expect-webdriverio"]
   },
-  "include": ["./test/**/*.ts"]
+  "include": ["./test/**/*.ts", "./types/*.ts"]
 }
